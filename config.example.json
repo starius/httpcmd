@@ -1,0 +1,17 @@
+{
+  "addr": ":8080",
+  "default_timeout_seconds": 30,
+  "endpoints": [
+    {
+      "path": "/status",
+      "command": ["/bin/sh", "-c", "echo ok"],
+      "work_dir": "/tmp",
+      "pty": true
+    },
+    {
+      "path": "/list",
+      "command": ["/bin/ls", "-la"],
+      "work_dir": "/"
+    }
+  ]
+}
